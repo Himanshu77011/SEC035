@@ -1,0 +1,167 @@
+/* styles.css (remains unchanged) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #e8ecef;
+    color: #2d2d2d;
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #8b4513;
+    letter-spacing: 1px;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 30px;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #5f2e0d;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8b4513;
+}
+
+main {
+    margin-top: 120px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #2d2d2d;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.restaurant-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #2d2d2d;
+    font-weight: 500;
+}
+
+.rating {
+    color: #fff;
+    background-color: #2e8b57;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+.cuisine {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.delivery-time {
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+}
