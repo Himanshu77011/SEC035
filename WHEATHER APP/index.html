@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Weather</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather</h1>
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter city">
+            <button id="searchBtn">Get Weather</button>
+        </div>
+        <div class="weather" id="weatherInfo" style="display: none;">
+            <h2 id="cityName"></h2>
+            <p id="temp"></p>
+            <p id="description"></p>
+        </div>
+        <div class="error" id="errorMsg" style="display: none;">
+            <p>City not found</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
