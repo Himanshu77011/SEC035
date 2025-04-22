@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Reverser</title>
+</head>
+<body>
+    <h2>Type a word to reverse:</h2>
+
+    <!-- Label for input field for better accessibility -->
+    <label for="wordInput">Word to reverse:</label>
+    <input type="text" id="wordInput" placeholder="Enter word here" aria-labelledby="wordInput">
+    
+    <button onclick="sendWord()">Reverse</button>
+
+    <p id="result"></p>
+
+    <script>
+        async function sendWord() {
+            const word = document.getElementById('wordInput').value;
+            const response = await fetch('/reverse', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({word: word})
+            });
+            const data = await response.json();
+            document.getElementById('result').innerText = 'Reversed: ' + data.reversed;
+        }
+    </script>
+</body>
+</html>
