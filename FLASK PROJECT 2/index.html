@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Example</title>
+</head>
+<body>
+    <h1>Counter: <span id="counterValue">0</span></h1>
+    <button id="incrementBtn">Increment</button>
+
+    <script>
+        // When the button is clicked, send a request to the server
+        document.getElementById('incrementBtn').addEventListener('click', async function() {
+            // Send an AJAX GET request to the '/increment' route
+            const response = await fetch('/increment');
+            const data = await response.json();
+            
+            // Update the counter on the webpage
+            document.getElementById('counterValue').innerText = data.count;
+        });
+    </script>
+</body>
+</html>
